@@ -1,7 +1,7 @@
 {
     "name": "govcms/require-dev",
     "description": "Require-dev package definition for GovCMS 8",
-    "require-dev": {
+    "require": {
         "phpmd/phpmd": "2.7.0",
         "phpunit/phpunit": "6.5",
         "behat/behat": "^3.5",
