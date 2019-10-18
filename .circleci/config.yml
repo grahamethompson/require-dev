@@ -6,7 +6,6 @@ jobs:
     steps:
       - checkout
       - run: composer validate --strict || true
-      - run: echo 'print "'"${CIRCLE_SHA1}"'";' >> ./drupal/settings/all.settings.php
       - run:
           name: Setup codebase
           command: |
@@ -20,5 +19,4 @@ jobs:
           working_directory: /app
           command: |
             composer info govcms/require-dev
-
 
