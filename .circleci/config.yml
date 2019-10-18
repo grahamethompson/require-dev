@@ -1,0 +1,24 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: quay.io/govcms/govcms-ci
+    steps:
+      - checkout
+      - run: composer validate --strict || true
+      - run: echo 'print "'"${CIRCLE_SHA1}"'";' >> ./drupal/settings/all.settings.php
+      - run:
+          name: Setup codebase
+          command: |
+            git checkout -b latest-package-"${CIRCLE_SHA1}"
+            git clone https://github.com/govCMS/govCMS8-scaffold-paas /app
+            composer --working-dir=/app config repositories.test path "/home/project"
+            composer --working-dir=/app update
+            composer --working-dir=/app require govcms/require-dev:dev-latest-package-"${CIRCLE_SHA1}" --ignore-platform-reqs
+      - run:
+          name: Test settings via drush
+          working_directory: /app
+          command: |
+            composer info govcms/require-dev
+
+
