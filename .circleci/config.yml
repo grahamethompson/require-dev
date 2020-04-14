@@ -15,8 +15,7 @@ jobs:
             composer --working-dir=/app update
             composer --working-dir=/app require govcms/require-dev:dev-latest-package-"${CIRCLE_SHA1}" --ignore-platform-reqs
       - run:
-          name: Test settings via drush
+          name: Ensure require-dev package is retrievable
           working_directory: /app
           command: |
             composer info govcms/require-dev
-
