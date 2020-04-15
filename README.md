@@ -8,3 +8,5 @@ To use this, you can use `satis.govcms.gov.au` as a repository source, and then:
 ```
 composer require --dev govcms/require-dev ~1
 ```
+
+[![CircleCI](https://circleci.com/gh/govCMS/require-dev.svg?style=svg)](https://circleci.com/gh/govCMS/require-dev)
