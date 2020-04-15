@@ -6,6 +6,8 @@
         "phpunit/phpunit": "6.5",
         "behat/behat": "^3.5",
         "behat/gherkin": "^4.5",
+        "drupal/coder": "^8.3",
+        "drupal/drupal-extension": "3.4.1",
         "jakub-onderka/php-parallel-lint": "^1.0",
         "integratedexperts/behat-screenshot": "^0.7.2"
     }
