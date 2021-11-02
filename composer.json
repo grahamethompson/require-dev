@@ -9,6 +9,6 @@
         "drupal/coder": "^8.3",
         "drupal/drupal-extension": "3.4.1",
         "jakub-onderka/php-parallel-lint": "^1.0",
-        "integratedexperts/behat-screenshot": "^0.7.2"
+        "drevops/behat-screenshot": "^1.1"
     }
 }
